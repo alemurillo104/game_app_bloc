@@ -47,7 +47,7 @@ class GameBox extends StatelessWidget {
                     AllGamesRating(game: game)
                   ],
                 ),
-                // const SizedBox(width: 10),
+                const SizedBox(width: 10),
                 const AllGamesButton(),
                 // Align(
                 //   alignment: AlignmentDirectional.bottomEnd,
