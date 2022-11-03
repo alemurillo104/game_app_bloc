@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:stripe_app/ui/home/widgets/all_games_widget/all_games_title.dart';
 
+import 'package:stripe_app/ui/home/widgets/all_games_widget/all_games_title.dart';
 import '../../models/game_model.dart';
 import 'all_games_button.dart';
 import 'all_games_image.dart';

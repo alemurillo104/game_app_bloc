@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+
 import 'package:stripe_app/ui/home/models/game_model.dart';
 
 class AllGamesImage extends StatelessWidget {
@@ -27,5 +27,3 @@ class AllGamesImage extends StatelessWidget {
     );
   }
 }
-
-

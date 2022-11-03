@@ -24,20 +24,20 @@ class Genre {
     List<Game> games;
 
     factory Genre.fromJson(Map<String, dynamic> json) => Genre(
-        id: json["id"],
-        name: json["name"],
-        slug: json["slug"],
-        gamesCount: json["games_count"],
-        imageBackground: json["image_background"],
-        games: List<Game>.from(json["games"].map((x) => Game.fromJson(x))),
+        id              : json["id"],
+        name            : json["name"],
+        slug            : json["slug"],
+        gamesCount      : json["games_count"],
+        imageBackground : json["image_background"],
+        games           : List<Game>.from(json["games"].map((x) => Game.fromJson(x))),
     );
 
     Map<String, dynamic> toJson() => {
-        "id": id,
-        "name": name,
-        "slug": slug,
-        "games_count": gamesCount,
-        "image_background": imageBackground,
-        "games": List<dynamic>.from(games.map((x) => x.toJson())),
+        "id"               : id,
+        "name"             : name,
+        "slug"             : slug,
+        "games_count"      : gamesCount,
+        "image_background" : imageBackground,
+        "games"            : List<dynamic>.from(games.map((x) => x.toJson())),
     };
 }

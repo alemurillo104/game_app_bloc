@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:stripe_app/ui/home/models/genre_model.dart';
 import 'package:stripe_app/ui/home/widgets/category_widget/bloc/category_bloc.dart';
 

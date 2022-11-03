@@ -29,4 +29,3 @@ class AllGamesState extends Equatable {
     status: status ?? this.status
   );
 }
-

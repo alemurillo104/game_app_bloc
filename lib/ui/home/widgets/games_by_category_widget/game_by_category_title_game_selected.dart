@@ -11,12 +11,12 @@ class TitleGameSelectedWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-     child: Text(
-      categoryName,
-       textAlign: TextAlign.start,
-       style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-     ),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+      child: Text(
+        categoryName,
+        textAlign: TextAlign.start,
+        style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+      ),
     );
   }
 }

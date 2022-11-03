@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+
 import 'package:stripe_app/repository/game_repository.dart';
 import 'package:stripe_app/ui/home/models/game_model.dart';
 

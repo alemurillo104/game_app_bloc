@@ -7,7 +7,6 @@ class HeaderTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      // height: 200,
       color: Colors.deepOrangeAccent,
       child: Column(
         children: [

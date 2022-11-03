@@ -1,6 +1,7 @@
-import 'package:bloc/bloc.dart';
-import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:equatable/equatable.dart';
+import 'package:bloc/bloc.dart';
+
 import 'package:stripe_app/repository/game_repository.dart';
 import 'package:stripe_app/ui/home/models/genre_model.dart';
 

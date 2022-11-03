@@ -48,7 +48,6 @@ class _BackgroundWidget extends StatelessWidget {
             BoxShadow(
               color: Colors.black54,
               blurRadius: 10,
-              // offset: Offset(5, 10)  
             )
           ]
         ),

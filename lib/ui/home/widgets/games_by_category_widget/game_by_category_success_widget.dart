@@ -22,8 +22,7 @@ class GameByCategorySuccessWidget extends StatelessWidget {
       children: [
         TitleGameSelectedWidget( categoryName: categoryName),
         SizedBox(
-          // height: 130,
-           height: MediaQuery.of(context).size.height * .2,
+          height: MediaQuery.of(context).size.height * .2,
           child: ListView.separated(
             padding: const EdgeInsets.only(
               left: 24.0,

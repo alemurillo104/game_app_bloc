@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:stripe_app/ui/home/widgets/all_games_widget/all_games_success_widget.dart';
 import 'package:stripe_app/ui/home/widgets/all_games_widget/bloc/all_games_bloc.dart';
+import 'package:stripe_app/ui/widgets/error_game_widget.dart';
 
 class AllGamesWidget extends StatelessWidget {
   const AllGamesWidget({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class AllGamesWidget extends StatelessWidget {
         : state.status.isLoading
           ? const Center(child:  CircularProgressIndicator())
           : state.status.isError
-            ? const Text('ERROR')
+            ? const ErrorGameWidget()
             : const SizedBox();
       },
     );
