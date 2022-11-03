@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stripe_app/ui/home/widgets/all_games_widget/all_games_title.dart';
 
 import '../../models/game_model.dart';
 import 'all_games_button.dart';
@@ -21,48 +22,26 @@ class GameBox extends StatelessWidget {
         decoration: BoxDecoration(
             color: const Color.fromARGB(255, 213, 211, 211),
             borderRadius: BorderRadius.circular(25)),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Padding(
-            padding: const EdgeInsets.all(15),
-            child: Row(
-              children: [
-                AllGamesImage(game: game),
-               
-                const SizedBox(width: 10),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      game.name,
-                      style:
-                        const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(height: 3),
-                    Text(
-                      game.slug,
-                      style: const TextStyle(fontSize: 10, color: Colors.black54),
-                    ),
-                    const SizedBox(height: 7),
-                    AllGamesRating(game: game)
-                  ],
-                ),
-                const SizedBox(width: 10),
-                const AllGamesButton(),
-                // Align(
-                //   alignment: AlignmentDirectional.bottomEnd,
-                //   child: ElevatedButton(
-                //       style: ElevatedButton.styleFrom(
-                //         primary: Colors.amberAccent,
-                //       ),
-                //       onPressed: () {},
-                //       child: const Text('View more',
-                //           style: TextStyle(color: Colors.black))),
-                // )
-              ],
+        child: Stack(
+          children:  [
+            Positioned(
+              top: 12, left: 20,
+              child: AllGamesImage(game: game)
             ),
-          ),
-        ),
+            Positioned(
+              top: 20, left: 80,
+              child: AllGamesTitle(game: game)
+            ),
+            Positioned(
+              top: 62, left: 80,
+              child: AllGamesRating(game: game)
+            ),
+            const Positioned(
+              bottom: 20, right: 20,
+              child: AllGamesButton()
+            ),
+          ],
+        )
       ),
     );
   }

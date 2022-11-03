@@ -19,7 +19,6 @@ class HeaderTitle extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Column(
-                  // mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                      Text('Welcome Alejandra!🙌', style: TextStyle(fontSize: 25), textAlign: TextAlign.start,),
                      Text('What would you like to play?', style: TextStyle(fontSize: 12), textAlign: TextAlign.left,),

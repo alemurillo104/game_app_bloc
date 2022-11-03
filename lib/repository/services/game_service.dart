@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:stripe_app/ui/home/models/game_model.dart';
 import 'package:stripe_app/ui/home/models/genre_model.dart';
@@ -23,14 +24,14 @@ class GameService{
         Map<String, dynamic> decodedData = jsonDecode(response.body);
         List<dynamic> list = decodedData['results'];
         List<Genre> genres = list.map((genre) => Genre.fromJson(genre) ).toList();
-        print('OK');
+        debugPrint('OK');
         return genres;
       }
-      print('ERROR');
+      debugPrint('ERROR');
       return [];
 
     } catch (e) {
-      print(e);
+      debugPrint(e.toString());
       return [];
     }
   }
@@ -50,15 +51,15 @@ class GameService{
         Map<String, dynamic> decodedData = jsonDecode(response.body);
         List<dynamic> results = decodedData['results'];
         List<Game> games = results.map((game) => Game.fromJson(game)).toList();
-        print('OK');
+        debugPrint('OK');
         return games;
       }
       
-      print('ERROR');
+      debugPrint('ERROR');
       return [];
 
     } catch (e) {
-      print(e);
+      debugPrint(e.toString());
       return [];
     }
   }
@@ -76,19 +77,17 @@ class GameService{
       if (response.statusCode == 200) {
         
         var decodedData = json.decode(response.body);
-        // print(decodedData['results']);
-
         List<dynamic> list = decodedData['results'];
         List<Game> games = list.map((game) => Game.fromJson(game) ).toList();
-        print('OK allgames');
+        debugPrint('OK allgames');
         return games;
       }
       
-      print('ERROR getAllGames');
+      debugPrint('ERROR getAllGames');
       return [];
 
     } catch (e) {
-      print(e);
+      debugPrint(e.toString());
       return [];
     }
 

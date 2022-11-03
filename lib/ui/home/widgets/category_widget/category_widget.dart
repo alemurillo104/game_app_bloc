@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:stripe_app/repository/game_repository.dart';
 import 'package:stripe_app/ui/home/models/genre_model.dart';
 import 'package:stripe_app/ui/home/widgets/category_widget/bloc/category_bloc.dart';
 import 'package:stripe_app/ui/home/widgets/category_widget/category_item.dart';
@@ -30,8 +29,6 @@ class _CategoryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    var resp = context.read<GameRepository>().getGamesByCategory(59);
-
     return BlocBuilder<CategoryBloc, CategoryState>(
       builder: (context, state) {
         return SizedBox(
@@ -48,7 +45,7 @@ class _CategoryWidget extends StatelessWidget {
                   context.read<GamesByCategoryBloc>().add(
                       GetGamesByCategory(
                         idSelected: categorySelected.id,
-                        categoryName: categorySelected.name ?? '',
+                        categoryName: categorySelected.name,
                       ),
                     );
                   context.read<CategoryBloc>().add(

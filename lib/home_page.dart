@@ -3,9 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:stripe_app/repository/game_repository.dart';
 import 'package:stripe_app/repository/services/game_service.dart';
-import 'package:stripe_app/ui/home/models/game_model.dart';
-import 'package:stripe_app/ui/home/widgets/all_games_widget/bloc/all_games_bloc.dart';
 import 'package:stripe_app/ui/home/home_layout.dart';
+import 'package:stripe_app/ui/home/widgets/all_games_widget/bloc/all_games_bloc.dart';
 import 'package:stripe_app/ui/home/widgets/category_widget/bloc/category_bloc.dart';
 import 'package:stripe_app/ui/home/widgets/games_by_category_widget/bloc/games_by_category_bloc.dart';
 
@@ -38,8 +37,6 @@ class HomePage extends StatelessWidget {
           child: const HomeLayout(),
         ),
       )
-        
-      
     );
   }
 }

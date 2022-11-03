@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:stripe_app/repository/game_repository.dart';
+import 'package:flutter/material.dart';
 
+import 'package:stripe_app/repository/game_repository.dart';
 import '../../../models/game_model.dart';
 
 part 'all_games_event.dart';
@@ -21,13 +22,11 @@ class AllGamesBloc extends Bloc<AllGamesEvent, AllGamesState> {
 
       List<Game> allGames = await gameRepository.getAllGames();
 
-      emit(state.copyWith(status: AllGamesStatus.loading, games: allGames));
-
+      emit(state.copyWith(status: AllGamesStatus.success, games: allGames));
 
     } catch (e) {
-      print(e);
+      debugPrint(e.toString());
       emit( state.copyWith(status: AllGamesStatus.error) );
     }
-
   }
 }
